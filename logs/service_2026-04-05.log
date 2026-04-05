@@ -1,0 +1,49 @@
+EVENT: 2026/04/05 18:13:37 logger.go:63: Servicio CSV Processor iniciado. PID: 6912
+EVENT: 2026/04/05 18:13:37 logger.go:63: Monitoreando directorio: D:\Descargas\proyecto\input
+EVENT: 2026/04/05 18:13:37 logger.go:63: Agente #3 iniciado.
+EVENT: 2026/04/05 18:13:37 logger.go:63: Agente #1 iniciado.
+EVENT: 2026/04/05 18:13:37 logger.go:63: Agente #0 iniciado.
+EVENT: 2026/04/05 18:13:37 logger.go:63: Agente #2 iniciado.
+EVENT: 2026/04/05 18:13:37 logger.go:63: Agente #4 iniciado.
+INFO: 2026/04/05 18:13:37 logger.go:47: Agente #3 procesando: D:\Descargas\proyecto\input\log (151.20.35.10--1) 2024_03_26_17_00_17.csv
+INFO: 2026/04/05 18:13:37 logger.go:47: Agente #3 terminó exitosamente con: D:\Descargas\proyecto\input\log (151.20.35.10--1) 2024_03_26_17_00_17.csv
+EVENT: 2026/04/05 18:13:51 logger.go:63: Señal de interrupción recibida. Iniciando apagado graceful...
+INFO: 2026/04/05 18:13:51 logger.go:47: Esperando a que los agentes terminen sus tareas actuales...
+EVENT: 2026/04/05 18:13:51 logger.go:63: Agente #4 terminado.
+EVENT: 2026/04/05 18:13:51 logger.go:63: Agente #3 terminado.
+EVENT: 2026/04/05 18:13:51 logger.go:63: Agente #2 terminado.
+EVENT: 2026/04/05 18:13:51 logger.go:63: Agente #1 terminado.
+EVENT: 2026/04/05 18:13:51 logger.go:63: Agente #0 terminado.
+EVENT: 2026/04/05 18:13:51 logger.go:63: Servicio detenido correctamente.
+EVENT: 2026/04/05 18:14:52 logger.go:63: Servicio CSV Processor iniciado. PID: 28180
+EVENT: 2026/04/05 18:14:52 logger.go:63: Agente #1 iniciado.
+EVENT: 2026/04/05 18:14:52 logger.go:63: Monitoreando directorio: D:\Descargas\proyecto\input
+EVENT: 2026/04/05 18:14:52 logger.go:63: Agente #3 iniciado.
+EVENT: 2026/04/05 18:14:52 logger.go:63: Agente #0 iniciado.
+EVENT: 2026/04/05 18:14:52 logger.go:63: Agente #2 iniciado.
+EVENT: 2026/04/05 18:14:52 logger.go:63: Agente #4 iniciado.
+INFO: 2026/04/05 18:14:52 logger.go:47: Agente #1 procesando: D:\Descargas\proyecto\input\log (151.20.35.10--1) 2024_03_26_17_00_17.csv
+INFO: 2026/04/05 18:14:52 logger.go:47: Agente #1 terminó exitosamente con: D:\Descargas\proyecto\input\log (151.20.35.10--1) 2024_03_26_17_00_17.csv
+EVENT: 2026/04/05 18:14:57 logger.go:63: Señal de interrupción recibida. Iniciando apagado graceful...
+INFO: 2026/04/05 18:14:57 logger.go:47: Esperando a que los agentes terminen sus tareas actuales...
+EVENT: 2026/04/05 18:14:57 logger.go:63: Agente #4 terminado.
+EVENT: 2026/04/05 18:14:57 logger.go:63: Agente #2 terminado.
+EVENT: 2026/04/05 18:14:57 logger.go:63: Agente #0 terminado.
+EVENT: 2026/04/05 18:14:57 logger.go:63: Agente #3 terminado.
+EVENT: 2026/04/05 18:14:57 logger.go:63: Agente #1 terminado.
+EVENT: 2026/04/05 18:14:57 logger.go:63: Servicio detenido correctamente.
+EVENT: 2026/04/05 18:27:28 logger.go:63: Servicio CSV Processor iniciado. PID: 31180
+EVENT: 2026/04/05 18:27:28 logger.go:63: Monitoreando directorio: D:\Descargas\proyecto\input
+EVENT: 2026/04/05 18:27:28 logger.go:63: Agente #1 iniciado.
+EVENT: 2026/04/05 18:27:28 logger.go:63: Agente #4 iniciado.
+EVENT: 2026/04/05 18:27:28 logger.go:63: Agente #2 iniciado.
+EVENT: 2026/04/05 18:27:28 logger.go:63: Agente #0 iniciado.
+EVENT: 2026/04/05 18:27:28 logger.go:63: Agente #3 iniciado.
+EVENT: 2026/04/05 18:27:37 logger.go:63: Señal de interrupción recibida. Iniciando apagado graceful...
+INFO: 2026/04/05 18:27:37 logger.go:47: Esperando a que los agentes terminen sus tareas actuales...
+EVENT: 2026/04/05 18:27:37 logger.go:63: Agente #0 terminado.
+EVENT: 2026/04/05 18:27:37 logger.go:63: Agente #2 terminado.
+EVENT: 2026/04/05 18:27:37 logger.go:63: Agente #3 terminado.
+EVENT: 2026/04/05 18:27:37 logger.go:63: Agente #4 terminado.
+EVENT: 2026/04/05 18:27:37 logger.go:63: Agente #1 terminado.
+EVENT: 2026/04/05 18:27:37 logger.go:63: Servicio detenido correctamente.

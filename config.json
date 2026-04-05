@@ -1,0 +1,9 @@
+{
+  "input_dir": "./input",
+  "sql_log_dir": "./sqllog",
+  "csv_log_dir": "./csvlog",
+  "logs_dir": "./logs",
+  "max_agents": 2,
+  "max_files_per_agent": 50,
+  "delay_before_read_ms": 200
+}
