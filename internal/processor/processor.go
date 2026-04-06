@@ -68,13 +68,15 @@ func ProcessFile(cfg *config.Config, filePath string) error {
 	sqlBuffer.Grow(2 * 1024 * 1024)
 
 	sqlBuffer.WriteString("CREATE TABLE IF NOT EXISTS log_records (\n")
-	sqlBuffer.WriteString("    primary_id VARCHAR(50),\n")
-	sqlBuffer.WriteString("    reception_date DATE,\n")
-	sqlBuffer.WriteString("    record_name VARCHAR(50),\n")
-	sqlBuffer.WriteString("    record_date DATE,\n")
-	sqlBuffer.WriteString("    record_time TIME,\n")
-	sqlBuffer.WriteString("    record_value FLOAT\n")
+	sqlBuffer.WriteString("    primary_id    VARCHAR(50)  NOT NULL,\n")
+	sqlBuffer.WriteString("    reception_date DATE        NOT NULL,\n")
+	sqlBuffer.WriteString("    record_name   VARCHAR(50)  NOT NULL,\n")
+	sqlBuffer.WriteString("    record_ts     TIMESTAMPTZ NOT NULL,\n")
+	sqlBuffer.WriteString("    record_value  FLOAT\n")
 	sqlBuffer.WriteString(");\n\n")
+	// Convierte la tabla en hypertable de TimescaleDB particionada por record_ts.
+	// if_not_exists => TRUE hace que sea idempotente (no falla si ya es hypertable).
+	sqlBuffer.WriteString("SELECT create_hypertable('log_records', 'record_ts', if_not_exists => TRUE);\n\n")
 
 	for scanner.Scan() {
 		lineCount++
@@ -134,7 +136,8 @@ func ProcessFile(cfg *config.Config, filePath string) error {
 		}
 
 		// Concatenación lineal (Zero allocations extra comparado a Sprintf)
-		sqlBuffer.WriteString("INSERT INTO log_records (primary_id, reception_date, record_name, record_date, record_time, record_value) VALUES ('")
+		// record_ts combina record_date + record_time como TIMESTAMPTZ para la hypertable.
+		sqlBuffer.WriteString("INSERT INTO log_records (primary_id, reception_date, record_name, record_ts, record_value) VALUES ('")
 		sqlBuffer.WriteString(primaryIDRow)
 		sqlBuffer.WriteString("', '")
 		sqlBuffer.WriteString(receptionDate)
@@ -142,7 +145,7 @@ func ProcessFile(cfg *config.Config, filePath string) error {
 		sqlBuffer.WriteString(recordName)
 		sqlBuffer.WriteString("', '")
 		sqlBuffer.WriteString(recordDate)
-		sqlBuffer.WriteString("', '")
+		sqlBuffer.WriteString(" ")
 		sqlBuffer.WriteString(recordTime)
 		sqlBuffer.WriteString("', ")
 		sqlBuffer.WriteString(recordValue)
