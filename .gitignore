@@ -1,0 +1,7 @@
+# Binarios compilados
+*.exe
+*.exe~
+
+# Logs locales
+*.log
+logs/
